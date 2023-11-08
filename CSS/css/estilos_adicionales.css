@@ -1,0 +1,34 @@
+/***********************************************
+
+ Autores: Marziani Eros - Hernandez Jorquera Joaquin
+
+***********************************************/
+
+/* Cabecera principal */
+.main-header{
+    background-color: blue;
+}
+
+/* Barra de navegación */
+.main-menu{
+    background-color: red;   
+}
+main section{
+    padding: 3px;
+    background-color: green;
+}
+
+/* Tarjetas */
+.card{
+    background-color: brown;
+}
+
+/* Cotización */
+.loading-item{
+    background-color: lightblue;
+}
+
+/* Pie de página principal */
+.main-footer{
+    background-color: violet;
+}
