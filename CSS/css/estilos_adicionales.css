@@ -8,7 +8,7 @@ body {
 }
 
 .main-header {
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: 100%;
     height: 10%;
     background-color: #272838;
     position: sticky;
@@ -42,21 +42,20 @@ body {
     right: 10px;
     position: absolute;
     transition: transform 0.3s ease-in-out;
-    cursor: help;
+  
 }
 
-.main-header .notifications :hover {
-    transform: rotate(10deg);
-    /* Gira 180 grados en sentido horario al hacer hover */
+.main-header .notifications:hover {
+    transform: rotate(10deg)
 }
 
 /* Estilo para el nav */
 nav.main-menu {
     position: fixed;
-    top: 20%;
+    top: 10%;
     /* Inicia donde termina el header */
     left: 0;
-    height: 80%;
+    height: 90%;
     /* Ocupa el resto del alto de la pÃ¡gina */
     width: 25%;
     background-color: #333;
@@ -68,17 +67,18 @@ nav.main-menu {
 /* Estilo general para el nav */
 nav.main-menu {
     position: fixed;
-    top: 0;
+    top: 10%; /* Ajusta la posición inicial según la altura del header */
     left: 0;
-    height: 100%;
+    height: 90%; /* El resto del alto de la página */
     width: 25%;
     background-color: #333;
-    /* Puedes ajustar el color de fondo segÃºn tus preferencias */
     padding: 20px;
     box-sizing: border-box;
+    z-index: 1; /* Asegura que el menú esté por debajo del header */
 }
 
-/* Estilo para los grupos de menÃº */
+
+
 .menu-group {
     margin-bottom: 20px;
 }
@@ -119,30 +119,25 @@ nav.main-menu {
     /* Cambia el color de fondo en hover */
 }
 
+
 /* Ajustes para el contenido principal (para evitar que quede detrÃ¡s del nav) */
-.main-content {
-    margin-left: 25%;
-    /* Ajusta el margen izquierdo para dar espacio al nav */
-    margin-top: 20%;
-    /* Margen superior igual a la altura del header */
-}
 
 .exclusive-offers {
-    position: fixed;
-    top: 20%;
-    /* Inicia donde termina el header */
-    left: 25%;
-    /* Inicia donde termina el nav */
-    width: 75%;
-    /* Ocupa el 75% restante del ancho de la pÃ¡gina */
+
+    width: 100%;
     height: 80%;
-    /* Ocupa el 80% del alto de la pÃ¡gina */
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+
+
+main{
+    margin-left: 25%;
 }
 
 .exclusive-offers h2:hover {
@@ -163,13 +158,13 @@ nav.main-menu {
 
 .art-offer:hover {
     background-color: #e0e0e0;
-    /* Cambia el color de fondo en hover */
+    
 }
 
 .art-offer header h3 {
     margin: 0;
     font-size: 1.2em;
-    /* Puedes ajustar el tamaÃ±o de la fuente segÃºn tus preferencias */
+    
 }
 
 .art-offer header p {
@@ -202,9 +197,7 @@ nav.main-menu {
 
 .art-offer button {
     background-color: #4CAF50;
-    /* Color de fondo del botÃ³n */
-    color: white;
-    /* Color del texto del botÃ³n */
+    color: white; 
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -213,7 +206,7 @@ nav.main-menu {
     font-size: 16px;
     cursor: pointer;
     transition: transform 1.3s ease-in-out;
-    /* Agrega una transiciÃ³n suave al color de fondo */
+    
 }
 
 .art-offer button:hover {
@@ -221,17 +214,18 @@ nav.main-menu {
 
 }
 
-
+.activity,
 .cards,
 .stock-control,
 .currency,
 .contact-support {
-    margin-top: 20px; /* Ajusta el margen superior para dejar espacio entre las secciones */
+    flex-basis: calc(33.33% - 20px);
+    margin-top: 20px; /* Ajusta según tus necesidades para agregar espacio entre secciones */
 }
 
-.main-footer{
-    position: fixed;
-    bottom: 0;
+
+.main-footer {
+    position: static;
     width: 100%;
     height: 5%;
     padding: 10px;
